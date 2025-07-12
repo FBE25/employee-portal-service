@@ -1,0 +1,19 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.input {
+  @apply w-full border border-amber-200 rounded px-3 py-2 bg-white text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-400;
+}
+.input {
+  @apply w-full border border-gray-300 rounded px-3 py-2 bg-white text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-600;
+}
+.input {
+  @apply w-full border border-amber-200 rounded px-3 py-2 bg-white text-sm shadow-sm focus:outline-none focus:ring focus:ring-amber-300;
+}
+.input {
+  @apply w-full border border-gray-300 rounded px-3 py-2 bg-white text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500;
+}
+.input {
+  @apply w-full p-2 border rounded bg-white text-sm shadow-sm;
+}
