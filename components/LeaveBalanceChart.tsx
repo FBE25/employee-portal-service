@@ -1,14 +1,14 @@
 
 'use client';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 const data = [
-  { name: 'Vacation Days', value: 18, total: 45, color: '#7c2d12' },
-  { name: 'Sick Leave', value: 8, total: 12, color: '#dc2626' },
-  { name: 'Casual Leave', value: 5, total: 10, color: '#f59e0b' },
+  { name: 'Vacation Days', value: 18, total: 45, color: '#7A1F24' },
+  { name: 'Sick Leave', value: 8, total: 12, color: '#B79C3B' },
+  { name: 'Casual Leave', value: 5, total: 10, color: '#4B4B4B' },
 ];
 
-const COLORS = ['#7c2d12', '#dc2626', '#f59e0b'];
+const COLORS = ['#7A1F24', '#B79C3B', '#4B4B4B'];
 
 export default function LeaveBalanceChart() {
   const CustomTooltip = ({ active, payload }: any) => {
@@ -29,8 +29,8 @@ export default function LeaveBalanceChart() {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-amber-900">Leave Balance</h3>
-        <i className="ri-calendar-check-line w-5 h-5 flex items-center justify-center text-amber-700 text-xl"></i>
+        <h3 className="text-lg font-semibold text-[#7A1F24]">Leave Balance</h3>
+        <i className="ri-calendar-check-line w-5 h-5 flex items-center justify-center text-[#B79C3B] text-xl"></i>
       </div>
 
       <div className="h-64">
@@ -73,3 +73,4 @@ export default function LeaveBalanceChart() {
     </div>
   );
 }
+

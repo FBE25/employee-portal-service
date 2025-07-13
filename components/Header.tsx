@@ -7,7 +7,7 @@ export default function Header() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header className="bg-white shadow-sm border-b border-gray-200 font-sans">
       <div className="px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -18,33 +18,33 @@ export default function Header() {
                 className="h-10 w-auto"
               />
               <div>
-                <h1 className="text-xl font-bold text-amber-900">Employee Portal</h1>
-                <p className="text-sm text-amber-700">Qatar National Council</p>
+                <h1 className="text-xl font-bold text-primary">Employee Portal</h1>
+                <p className="text-sm text-neutralText">National Planning Council</p>
               </div>
             </div>
           </div>
           
           <div className="flex items-center space-x-4">
-            <button className="p-2 text-amber-800 hover:bg-amber-50 rounded-lg">
-              <i className="ri-notification-3-line w-5 h-5 flex items-center justify-center text-xl"></i>
+            <button className="p-2 text-primary hover:bg-bgLight rounded-lg transition">
+              <i className="ri-notification-3-line text-xl"></i>
             </button>
             
             <div className="relative">
               <button 
                 onClick={() => setIsProfileOpen(!isProfileOpen)}
-                className="flex items-center space-x-2 p-2 hover:bg-amber-50 rounded-lg"
+                className="flex items-center space-x-2 p-2 hover:bg-bgLight rounded-lg transition"
               >
-                <div className="w-8 h-8 bg-amber-900 rounded-full flex items-center justify-center text-white text-sm font-medium">
-                  AH
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-medium">
+                  FA
                 </div>
-                <span className="text-amber-900 font-medium">Fatma Alkuwari</span>
-                <i className="ri-arrow-down-s-line w-4 h-4 flex items-center justify-center text-amber-800"></i>
+                <span className="text-primary font-medium">Fatma Alkuwari</span>
+                <i className="ri-arrow-down-s-line text-primary text-base"></i>
               </button>
               
               {isProfileOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Profile Settings</a>
-                  <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Change Password</a>
+                  <a href="#" className="block px-4 py-2 text-neutralText hover:bg-bgLight">Profile Settings</a>
+                  <a href="#" className="block px-4 py-2 text-neutralText hover:bg-bgLight">Change Password</a>
                   <hr className="my-2" />
                   <a href="#" className="block px-4 py-2 text-red-600 hover:bg-red-50">Sign Out</a>
                 </div>

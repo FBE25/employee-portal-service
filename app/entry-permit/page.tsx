@@ -1,38 +1,39 @@
 // app/entry-permit/page.tsx
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function EntryPermitPage() {
   const [parkingRequired, setParkingRequired] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-2xl font-bold text-amber-900 mb-1">Entry Permit Request</h1>
-        <p className="text-sm text-gray-600 mb-6">Submit a visitor entry permit request</p>
+    <div className="min-h-screen bg-amber-50 p-8 font-sans">
+      <h1 className="text-2xl font-bold text-[#8A1538] mb-1">Entry Permit Request</h1>
+      <p className="text-sm text-[#5e0f26] mb-6">Submit a visitor entry permit request</p>
 
-        {/* Employee Information */}
-        <section className="bg-white rounded-xl p-6 shadow mb-6">
-          <h2 className="font-semibold text-amber-900 flex items-center mb-4">
+      <div className="bg-white p-8 rounded-xl shadow border border-gray-200 w-full space-y-8">
+        {/* Employee Info */}
+        <section>
+          <h2 className="text-lg font-semibold text-[#8A1538] flex items-center mb-4">
             <i className="ri-user-line mr-2" /> Employee Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="Fatma Alkuwari" disabled className="input" />
-            <input type="text" placeholder="Information System" disabled className="input" />
-            <input type="text" placeholder="Building A - Floor 3 - Room 312" disabled className="input" />
-            <input type="text" placeholder="+974 4444 5555 Ext: 312" disabled className="input" />
+            <input type="text" disabled value="Fatma Alkuwari" className="input" />
+            <input type="text" disabled value="Information System" className="input" />
+            <input type="text" disabled value="Building A - Floor 3 - Room 312" className="input" />
+            <input type="text" disabled value="+974 4444 5555 Ext: 312" className="input" />
           </div>
         </section>
 
-        {/* Visitor Information */}
-        <section className="bg-white rounded-xl p-6 shadow mb-6">
-          <h2 className="font-semibold text-amber-900 flex items-center mb-4">
+        {/* Visitor Info */}
+        <section>
+          <h2 className="text-lg font-semibold text-[#8A1538] flex items-center mb-4">
             <i className="ri-user-add-line mr-2" /> Visitor Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input type="text" placeholder="Enter visitor’s full name" className="input" />
             <select className="input">
+              <option>Select number of visitors</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -43,8 +44,8 @@ export default function EntryPermitPage() {
         </section>
 
         {/* Visit Details */}
-        <section className="bg-white rounded-xl p-6 shadow mb-6">
-          <h2 className="font-semibold text-amber-900 flex items-center mb-4">
+        <section>
+          <h2 className="text-lg font-semibold text-[#8A1538] flex items-center mb-4">
             <i className="ri-calendar-line mr-2" /> Visit Details
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -65,25 +66,25 @@ export default function EntryPermitPage() {
           <p className="text-xs text-gray-400 text-right">0/500 characters</p>
         </section>
 
-        {/* Parking Requirements */}
-        <section className="bg-white rounded-xl p-6 shadow mb-6">
-          <h2 className="font-semibold text-amber-900 flex items-center mb-4">
+        {/* Parking */}
+        <section>
+          <h2 className="text-lg font-semibold text-[#8A1538] flex items-center mb-4">
             <i className="ri-parking-box-line mr-2" /> Parking Requirements
           </h2>
-          <label className="flex items-center space-x-2">
+          <label className="flex items-center space-x-2 text-sm text-gray-700">
             <input
               type="checkbox"
               checked={parkingRequired}
               onChange={() => setParkingRequired(!parkingRequired)}
-              className="form-checkbox text-amber-600"
+              className="form-checkbox text-[#8A1538] border-gray-300"
             />
             <span>Visitor requires parking space</span>
           </label>
         </section>
 
-        {/* Additional Notes */}
-        <section className="bg-white rounded-xl p-6 shadow mb-6">
-          <h2 className="font-semibold text-amber-900 flex items-center mb-4">
+        {/* Notes */}
+        <section>
+          <h2 className="text-lg font-semibold text-[#8A1538] flex items-center mb-4">
             <i className="ri-file-text-line mr-2" /> Additional Notes
           </h2>
           <textarea
@@ -95,8 +96,8 @@ export default function EntryPermitPage() {
 
         {/* Actions */}
         <div className="flex justify-end gap-4">
-          <button className="bg-gray-300 text-gray-800 px-6 py-2 rounded shadow">Cancel</button>
-          <button className="bg-amber-700 text-white px-6 py-2 rounded shadow hover:bg-amber-800">
+          <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded hover:bg-gray-300">Cancel</button>
+          <button className="bg-[#8A1538] text-white px-6 py-2 rounded hover:bg-[#6c0f2c]">
             Submit Request
           </button>
         </div>
