@@ -15,16 +15,12 @@ export default function Sidebar() {
     { id: 'business-card', label: 'Business Card', icon: 'ri-contacts-book-line', href: '/business-card' },
   ];
 
-  // IDs to apply black text
-  const blackTextIds = ['stationary', 'maintenance', 'parking', 'permit', 'business-card'];
-
   return (
     <aside className="w-64 bg-[#4A0B16] text-white min-h-screen font-sans">
       <div className="p-6">
         <nav className="space-y-2">
           {menuItems.map((item) => {
             const isActive = activeSection === item.id;
-            const isBlackText = blackTextIds.includes(item.id);
 
             return (
               <Link key={item.id} href={item.href} className="block">
@@ -33,9 +29,7 @@ export default function Sidebar() {
                   className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors
                     ${isActive
                       ? 'bg-primary/90 text-white'
-                      : isBlackText
-                      ? 'text-black hover:bg-primary/70 hover:text-white'
-                      : 'text-black hover:bg-primary/70 hover:text-white'
+                      : 'text-white hover:bg-primary/70'
                     }`}
                 >
                   <i className={`${item.icon} w-5 h-5 text-xl`} />
